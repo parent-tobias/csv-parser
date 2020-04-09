@@ -14,6 +14,6 @@ The CSV converter includes four useful methods:
 * `.toString(arrayOfFieldNames, arrayOfObjects)` converts the array of objects to a CSS string, in the order of the field names. Thus, you can "organize" the CSV you output, rather than simply making them a haphazard mess. Another advantage to having the array of field names is, you can also use that to access getters in your objects, in order to generate properties that might not exist.
 * `.fromString(csvString)` converts a CSV string into an array of objects. There is an assumption here. I assume that the first row of the CSV file is the column-names, and I use those as they object property names in here.
 * `.toFile(arrayOfFieldNames, arrayOfObjects, fileName)` runs the `.toString()` above, and prompts the user to save the output file.
-* `.fromFile(fileReference)` once the file has been read in, the file referenece is passed in and the `.fromString()` is run. The file can be read in either using the async mentioned above, or whatever other file upload method, but the file reference is what gets passed in here.
+* `.fromFile(fileReference)` once the file has been read in, the file referenece is passed in and the `.fromString()` is run. The `fileReference` is simply the value from a HTML DOM form file input.
 
 This was kind of fun. It's not something everyone will need, it's a very specialized use thing, but it was a fun exercise.
